@@ -10,6 +10,14 @@ export interface Question {
     answers: Answer[]
 }
 
-export interface BrujulaConstitucionalData {
+export interface GameData {
     questions: Question[]
+}
+
+export interface GameState {
+    answers: {
+        questionId: number
+        type: number
+    }[]
+    questionIndex: number
 }

@@ -25,18 +25,18 @@
       "text": "¿Debería el gobierno entregar ayuda para pagar el colegio de tus hijos?",
       "level": 1,
       "answers":[
-        {"text": "Si", "type": 1},
-        {"text": "No", "type": 2},
+        {"text": "Si", "type": 2},
+        {"text": "No", "type": 1},
         {"text": "No se", "type": 0}
       ]
     },
     {
       "id": 4,
-      "text": "¿Esperas tener atenció de salud en cualquier lugar, sin discriminación?",
+      "text": "¿Esperas tener atención de salud en cualquier lugar, sin discriminación?",
       "level": 1,
       "answers":[
-        {"text": "Si", "type": 1},
-        {"text": "No", "type": 2},
+        {"text": "Si", "type": 2},
+        {"text": "No", "type": 1},
         {"text": "No se", "type": 0}
       ]
     },
