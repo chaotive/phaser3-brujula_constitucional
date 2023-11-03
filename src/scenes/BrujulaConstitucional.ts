@@ -36,8 +36,11 @@ export default class BrujulaConstitucional extends Phaser.Scene
 
     create ()
     {
-        this.add.shader('RGB Shift Field', 0, 0, 800, 600).setOrigin(0);
-        this.add.shader('Plasma', 0, 412, 800, 172).setOrigin(0);
+        // this.scale.displaySize.setAspectRatio( 780 / 360 );
+        // this.scale.refresh();
+
+        this.add.shader('RGB Shift Field', 0, 0, 1066, 600).setOrigin(0);
+        this.add.shader('Plasma', 0, 412, 1066, 172).setOrigin(0);
 
         // this.add.image(400, 300, 'libs');
         //
@@ -51,7 +54,8 @@ export default class BrujulaConstitucional extends Phaser.Scene
         //     repeat: -1
         // })
 
-        const logo = this.add.image(10, 10, 'logo').setOrigin(0);
+        this.add.image(10, 10, 'logo').setOrigin(0).setScale(0.6
+        );
 
         // const textData = this.cache.text.get('textData');
         // this.add.dom(400, 300, 'div', 'background-color: rgba(0, 0, 80); width: 600px; height: 500px; font: 12px Courier; color: white; overflow: hidden', textData);
@@ -132,8 +136,8 @@ export default class BrujulaConstitucional extends Phaser.Scene
         this.registerVolatile(this.add.text(50,450, "¡FELICIDADES!", titleStyle));
         this.registerVolatile(this.add.text(50,500, "Haz llegado al final del juego. Mira lo que hemos calculado como tu opción :)", textStyle));
 
-        this.registerVolatile(this.add.sprite(260, -115, 'result').setOrigin(0).setScale(1.25));
-        this.registerVolatile(this.add.text(430,70, "TU RESULTADO", resultStyle));
+        this.registerVolatile(this.add.sprite(460, -115, 'result').setOrigin(0).setScale(1.25));
+        this.registerVolatile(this.add.text(630,70, "TU RESULTADO", resultStyle));
 
         let aFavorCount: number = 0
         this.state.answers.forEach(a => { if (a.type == 1) { aFavorCount++ } } )
@@ -148,15 +152,15 @@ export default class BrujulaConstitucional extends Phaser.Scene
         const indeciso = indecisoCount / this.gameData.questions.length * 100
 
         this.registerVolatile(
-            this.add.text(435,100+50, "A favor: " + aFavor.toFixed(1) + "%", preferenceStyle));
+            this.add.text(635,100+50, "A favor: " + aFavor.toFixed(1) + "%", preferenceStyle));
         this.registerVolatile(
-            this.add.text(435,100+75, "En Contra: " + enContra.toFixed(1) + "%", preferenceStyle));
+            this.add.text(635,100+75, "En Contra: " + enContra.toFixed(1) + "%", preferenceStyle));
         this.registerVolatile(
-            this.add.text(435,100+100, "Indeciso: " + indeciso.toFixed(1) + "%", preferenceStyle));
+            this.add.text(635,100+100, "Indeciso: " + indeciso.toFixed(1) + "%", preferenceStyle));
 
-        const button = this.add.sprite(450, 250, 'button1')
+        const button = this.add.sprite(650, 250, 'button1')
             .setOrigin(0).setScale(0.1).setInteractive();
-        this.registerVolatile(this.add.text(475,250+25, "Jugar de nuevo", buttonStyle))
+        this.registerVolatile(this.add.text(675,250+25, "Jugar de nuevo", buttonStyle))
         button.on('pointerup', _ => {
             this.initState()
             this.cleanVolatiles()
@@ -231,9 +235,9 @@ export default class BrujulaConstitucional extends Phaser.Scene
             // backgroundColor: "#FFFF00"
         }
 
-        const button = this.add.sprite(450, y, 'button1')
+        const button = this.add.sprite(650, y, 'button1')
             .setOrigin(0).setScale(0.1).setInteractive();
-        const text = this.add.text(475,y+25, answer.text, style);
+        const text = this.add.text(675,y+25, answer.text, style);
         button.on('pointerup', _ => this.answerQuestion(answer.type))
 
         return [button, text]
@@ -246,9 +250,9 @@ export default class BrujulaConstitucional extends Phaser.Scene
             // backgroundColor: "#FFFF00"
         }
 
-        const button = this.add.sprite(450, y, 'button1')
+        const button = this.add.sprite(650, y, 'button1')
             .setOrigin(0).setScale(0.1).setInteractive();
-        const text = this.add.text(475,y+25, "Comenzar", style);
+        const text = this.add.text(675,y+25, "Comenzar", style);
         button.on('pointerup', _ => {
             this.cleanVolatiles()
             this.addQuestions()

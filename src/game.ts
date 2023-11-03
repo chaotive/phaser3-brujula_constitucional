@@ -34,8 +34,13 @@ import BrujulaConstitucional from "./scenes/BrujulaConstitucional";
 const config = {
     type: Phaser.WEBGL,
     parent: 'phaser-example',
-    width: 800,
+    width: 1066,
     height: 600,
+    scale: {
+        // width: 1280,
+        // height: 720,
+        mode: Phaser.Scale.FIT
+    },
     dom: {
         createContainer: true
     },
