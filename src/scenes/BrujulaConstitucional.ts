@@ -1,6 +1,5 @@
 import * as Phaser from 'phaser';
 import {Answer, GameData, GameState, Question} from "../BrujulaConstitucional.typings";
-import TextStyle = Phaser.Types.GameObjects.Text.TextStyle;
 import GameObject = Phaser.GameObjects.GameObject;
 import {
     stButtonText,
