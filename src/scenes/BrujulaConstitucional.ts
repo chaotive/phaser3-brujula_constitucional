@@ -2,6 +2,7 @@ import * as Phaser from 'phaser';
 import {Answer, GameData, GameState, Question} from "../BrujulaConstitucional.typings";
 import TextStyle = Phaser.Types.GameObjects.Text.TextStyle;
 import GameObject = Phaser.GameObjects.GameObject;
+import {stButton, stButtonText, stPreference, stResult, stText, stTitle} from "../BrujulaConstitucional/styles";
 
 export default class BrujulaConstitucional extends Phaser.Scene
 {
@@ -12,7 +13,6 @@ export default class BrujulaConstitucional extends Phaser.Scene
     constructor ()
     {
         super();
-
         this.volatileObjects = [];
     }
 
@@ -21,8 +21,8 @@ export default class BrujulaConstitucional extends Phaser.Scene
         // this.load.image('phaser3-logo', 'assets/phaser3-logo.png');
         // this.load.image('libs', 'assets/libs.png');
 
-        this.load.glsl('bundle', 'assets/plasma-bundle.glsl.js');
-        this.load.glsl('stars', 'assets/starfields.glsl.js');
+        // this.load.glsl('bundle', 'assets/plasma-bundle.glsl.js');
+        // this.load.glsl('stars', 'assets/starfields.glsl.js');
 
         this.load.image('logo', 'assets/logo1.2.png');
 
@@ -32,6 +32,9 @@ export default class BrujulaConstitucional extends Phaser.Scene
 
         this.load.image('button1', 'assets/ui/button1.1.png');
         this.load.image('result', 'assets/ui/result.png');
+
+        this.load.image('background1', 'assets/backgrounds/background1.png');
+        this.load.image('banderachile', 'assets/backgrounds/banderachile.png');
     }
 
     create ()
@@ -39,8 +42,8 @@ export default class BrujulaConstitucional extends Phaser.Scene
         // this.scale.displaySize.setAspectRatio( 780 / 360 );
         // this.scale.refresh();
 
-        this.add.shader('RGB Shift Field', 0, 0, 1066, 600).setOrigin(0);
-        this.add.shader('Plasma', 0, 412, 1066, 172).setOrigin(0);
+        // this.add.shader('RGB Shift Field', 0, 0, 1066, 600).setOrigin(0);
+        // this.add.shader('Plasma', 0, 412, 1066, 172).setOrigin(0);
 
         // this.add.image(400, 300, 'libs');
         //
@@ -54,8 +57,21 @@ export default class BrujulaConstitucional extends Phaser.Scene
         //     repeat: -1
         // })
 
-        this.add.image(10, 10, 'logo').setOrigin(0).setScale(0.6
-        );
+        this.add.image(0, 0, 'background1').setOrigin(0).setScale(1.3325);
+        this.add.image(133, -100, 'banderachile').setOrigin(0);
+        // this.add.image(25, 25, 'logo').setOrigin(0).setScale(0.8);
+
+        const frame = this.add.rectangle(533, 498, 1016, 172, 0xC0C0C0);
+        frame.setStrokeStyle(2, 0xff6699);
+        this.tweens.add({
+            targets: frame,
+            scaleX: 0.99,
+            scaleY: 0.97,
+            yoyo: true,
+            repeat: -1,
+            ease: 'Sine.easeInOut',
+            duration: 2 * 1000
+        });
 
         // const textData = this.cache.text.get('textData');
         // this.add.dom(400, 300, 'div', 'background-color: rgba(0, 0, 80); width: 600px; height: 500px; font: 12px Courier; color: white; overflow: hidden', textData);
@@ -84,60 +100,18 @@ export default class BrujulaConstitucional extends Phaser.Scene
     }
 
     showIntro() {
-        const titleStyle: TextStyle = {
-            fontSize: 25,
-            color: "#d35400",
-            backgroundColor: "#FFFF00"
-        }
+        this.registerVolatile(this.add.text(50,450, "¡Bienvenido a la BRÚJULA CONSTITUCIONAL!", stTitle));
+        this.registerVolatile(this.add.text(50,500, "Responde unas sencillas preguntas, y orienta tu voto de cara al plebicito.", stText));
 
-        const textStyle: TextStyle = {
-            // fontSize: 34,
-            // color: "#d35400",
-            // backgroundColor: "#FFFF00"
-        }
-
-        this.registerVolatile(this.add.text(50,450, "¡Bievenido a la BRÚJULA CONSTITUCIONAL!", titleStyle));
-        this.registerVolatile(this.add.text(50,500, "Responde unas sencillas preguntas, y orienta tu voto de cara al plebicito.", textStyle));
-
-        this.registerVolatiles(this.makeStartButton(150))
+        this.registerVolatiles(this.makeStartButton(440))
     }
 
     showResult() {
-        const titleStyle: TextStyle = {
-            fontSize: 25,
-            color: "#d35400",
-            backgroundColor: "#FFFF00"
-        }
+        this.registerVolatile(this.add.text(50,450, "¡FELICIDADES!", stTitle));
+        this.registerVolatile(this.add.text(50,500, "Haz llegado al final del juego. Mira lo que hemos calculado como tu opción :)", stText));
 
-        const textStyle: TextStyle = {
-            // fontSize: 34,
-            // color: "#d35400",
-            // backgroundColor: "#FFFF00"
-        }
-
-        const resultStyle: TextStyle = {
-            fontSize: 42,
-            color: "#FF0000",
-            // backgroundColor: "#FFFF00"
-        }
-
-        const buttonStyle: TextStyle = {
-            fontSize: 25,
-            color: "#0000FF",
-            // backgroundColor: "#FFFF00"
-        }
-
-        const preferenceStyle: TextStyle = {
-            fontSize: 30,
-            color: "#FF00FF",
-            // backgroundColor: "#FFFF00"
-        }
-
-        this.registerVolatile(this.add.text(50,450, "¡FELICIDADES!", titleStyle));
-        this.registerVolatile(this.add.text(50,500, "Haz llegado al final del juego. Mira lo que hemos calculado como tu opción :)", textStyle));
-
-        this.registerVolatile(this.add.sprite(460, -115, 'result').setOrigin(0).setScale(1.25));
-        this.registerVolatile(this.add.text(630,70, "TU RESULTADO", resultStyle));
+        this.registerVolatile(this.add.sprite(520, -115, 'result').setOrigin(0).setScale(1.25));
+        this.registerVolatile(this.add.text(700,70, "Tu Resultado", stResult));
 
         let aFavorCount: number = 0
         this.state.answers.forEach(a => { if (a.type == 1) { aFavorCount++ } } )
@@ -152,15 +126,15 @@ export default class BrujulaConstitucional extends Phaser.Scene
         const indeciso = indecisoCount / this.gameData.questions.length * 100
 
         this.registerVolatile(
-            this.add.text(635,100+50, "A favor: " + aFavor.toFixed(1) + "%", preferenceStyle));
+            this.add.text(695,100+50, "A favor: " + aFavor.toFixed(1) + "%", stPreference));
         this.registerVolatile(
-            this.add.text(635,100+75, "En Contra: " + enContra.toFixed(1) + "%", preferenceStyle));
+            this.add.text(695,100+75, "En Contra: " + enContra.toFixed(1) + "%", stPreference));
         this.registerVolatile(
-            this.add.text(635,100+100, "Indeciso: " + indeciso.toFixed(1) + "%", preferenceStyle));
+            this.add.text(695,100+100, "Indeciso: " + indeciso.toFixed(1) + "%", stPreference));
 
-        const button = this.add.sprite(650, 250, 'button1')
+        const button = this.add.sprite(710, 250, 'button1')
             .setOrigin(0).setScale(0.1).setInteractive();
-        this.registerVolatile(this.add.text(675,250+25, "Jugar de nuevo", buttonStyle))
+        this.registerVolatile(this.add.text(725,250+25, "JUGAR DE NUEVO", stButton))
         button.on('pointerup', _ => {
             this.initState()
             this.cleanVolatiles()
@@ -171,7 +145,7 @@ export default class BrujulaConstitucional extends Phaser.Scene
 
     answerQuestion(type: number)
     {
-        console.log(type);
+        // console.log(type);
         this.state.answers.push({
             questionId: this.gameData.questions[this.state.questionIndex].id,
             type
@@ -216,43 +190,25 @@ export default class BrujulaConstitucional extends Phaser.Scene
     }
 
     makeQuestion(question:Question) {
-        const style: TextStyle = {
-            fontSize: 25,
-            color: "#d35400",
-            backgroundColor: "#FFFF00"
-        }
-
-        const questionTitle = this.add.text(50,450, "Pregunta " + (this.state.questionIndex + 1) + ":", style);
-        const questionText = this.add.text(50,500, question.text, style);
+        const questionTitle = this.add.text(50,450, "Pregunta " + (this.state.questionIndex + 1), stTitle);
+        const questionText = this.add.text(50,500, question.text, stText);
 
         return [questionTitle, questionText]
     }
 
     makeAnswerButton(answer: Answer, y: number) {
-        const style: TextStyle = {
-            fontSize: 34,
-            color: "#0000FF",
-            // backgroundColor: "#FFFF00"
-        }
-
-        const button = this.add.sprite(650, y, 'button1')
+        const button = this.add.sprite(720, y, 'button1')
             .setOrigin(0).setScale(0.1).setInteractive();
-        const text = this.add.text(675,y+25, answer.text, style);
+        const text = this.add.text(745,y+25, answer.text, stButtonText);
         button.on('pointerup', _ => this.answerQuestion(answer.type))
 
         return [button, text]
     }
 
     makeStartButton(y: number) {
-        const style: TextStyle = {
-            fontSize: 34,
-            color: "#0000FF",
-            // backgroundColor: "#FFFF00"
-        }
-
-        const button = this.add.sprite(650, y, 'button1')
+        const button = this.add.sprite(720, y, 'button1')
             .setOrigin(0).setScale(0.1).setInteractive();
-        const text = this.add.text(675,y+25, "Comenzar", style);
+        const text = this.add.text(750,y+20, "COMENZAR", stButtonText);
         button.on('pointerup', _ => {
             this.cleanVolatiles()
             this.addQuestions()
