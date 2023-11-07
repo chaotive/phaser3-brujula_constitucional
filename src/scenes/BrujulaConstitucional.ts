@@ -2,7 +2,15 @@ import * as Phaser from 'phaser';
 import {Answer, GameData, GameState, Question} from "../BrujulaConstitucional.typings";
 import TextStyle = Phaser.Types.GameObjects.Text.TextStyle;
 import GameObject = Phaser.GameObjects.GameObject;
-import {stButton, stButtonText, stPreference, stResult, stText, stTitle} from "../BrujulaConstitucional/styles";
+import {
+    stButtonText,
+    stButtonTextSmall,
+    stLogo,
+    stPreference,
+    stResult,
+    stText,
+    stTitle
+} from "../BrujulaConstitucional/styles";
 
 export default class BrujulaConstitucional extends Phaser.Scene
 {
@@ -35,6 +43,7 @@ export default class BrujulaConstitucional extends Phaser.Scene
 
         this.load.image('background1', 'assets/backgrounds/background1.png');
         this.load.image('banderachile', 'assets/backgrounds/banderachile.png');
+        this.load.image('brujula', 'assets/backgrounds/brujula.png');
     }
 
     create ()
@@ -59,6 +68,8 @@ export default class BrujulaConstitucional extends Phaser.Scene
 
         this.add.image(0, 0, 'background1').setOrigin(0).setScale(1.3325);
         this.add.image(133, -100, 'banderachile').setOrigin(0);
+        this.add.image(20, 25, 'brujula').setOrigin(0).setScale(0.4);
+        this.add.text(36,90, "Brújula\nConstitucional", stLogo);
         // this.add.image(25, 25, 'logo').setOrigin(0).setScale(0.8);
 
         const frame = this.add.rectangle(533, 498, 1016, 172, 0xC0C0C0);
@@ -100,15 +111,15 @@ export default class BrujulaConstitucional extends Phaser.Scene
     }
 
     showIntro() {
-        this.registerVolatile(this.add.text(50,450, "¡Bienvenido a la BRÚJULA CONSTITUCIONAL!", stTitle));
-        this.registerVolatile(this.add.text(50,500, "Responde unas sencillas preguntas, y orienta tu voto de cara al plebicito.", stText));
+        this.registerVolatile(this.add.text(50,435, "¡BIENVENIDO!", stTitle));
+        this.registerVolatile(this.add.text(50,500, "Juega respondiendo unas sencillas preguntas, \ny orienta tu voto de cara al plebicito.", stText));
 
-        this.registerVolatiles(this.makeStartButton(440))
+        this.registerVolatiles(this.makeStartButton(450))
     }
 
     showResult() {
-        this.registerVolatile(this.add.text(50,450, "¡FELICIDADES!", stTitle));
-        this.registerVolatile(this.add.text(50,500, "Haz llegado al final del juego. Mira lo que hemos calculado como tu opción :)", stText));
+        this.registerVolatile(this.add.text(50,435, "¡FELICIDADES!", stTitle));
+        this.registerVolatile(this.add.text(50,500, "Haz llegado al final del juego. \nMira lo que hemos calculado como tu opción :)", stText));
 
         this.registerVolatile(this.add.sprite(520, -115, 'result').setOrigin(0).setScale(1.25));
         this.registerVolatile(this.add.text(700,70, "Tu Resultado", stResult));
@@ -134,7 +145,7 @@ export default class BrujulaConstitucional extends Phaser.Scene
 
         const button = this.add.sprite(710, 250, 'button1')
             .setOrigin(0).setScale(0.1).setInteractive();
-        this.registerVolatile(this.add.text(725,250+25, "JUGAR DE NUEVO", stButton))
+        this.registerVolatile(this.add.text(725,250+25, "JUGAR DE NUEVO", stButtonTextSmall))
         button.on('pointerup', _ => {
             this.initState()
             this.cleanVolatiles()
@@ -190,25 +201,25 @@ export default class BrujulaConstitucional extends Phaser.Scene
     }
 
     makeQuestion(question:Question) {
-        const questionTitle = this.add.text(50,450, "Pregunta " + (this.state.questionIndex + 1), stTitle);
+        const questionTitle = this.add.text(50,435, "Pregunta " + (this.state.questionIndex + 1), stTitle);
         const questionText = this.add.text(50,500, question.text, stText);
 
         return [questionTitle, questionText]
     }
 
     makeAnswerButton(answer: Answer, y: number) {
-        const button = this.add.sprite(720, y, 'button1')
+        const button = this.add.sprite(740, y, 'button1')
             .setOrigin(0).setScale(0.1).setInteractive();
-        const text = this.add.text(745,y+25, answer.text, stButtonText);
+        const text = this.add.text(765,y+20, answer.text, stButtonText);
         button.on('pointerup', _ => this.answerQuestion(answer.type))
 
         return [button, text]
     }
 
     makeStartButton(y: number) {
-        const button = this.add.sprite(720, y, 'button1')
+        const button = this.add.sprite(740, y, 'button1')
             .setOrigin(0).setScale(0.1).setInteractive();
-        const text = this.add.text(750,y+20, "COMENZAR", stButtonText);
+        const text = this.add.text(770,y+15, "COMENZAR", stButtonText);
         button.on('pointerup', _ => {
             this.cleanVolatiles()
             this.addQuestions()
