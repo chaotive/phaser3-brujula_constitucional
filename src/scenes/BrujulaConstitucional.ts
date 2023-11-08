@@ -66,13 +66,16 @@ export default class BrujulaConstitucional extends Phaser.Scene
         // })
 
         this.add.image(0, 0, 'background1').setOrigin(0).setScale(1.3325);
-        this.add.image(133, -100, 'banderachile').setOrigin(0);
-        this.add.image(20, 25, 'brujula').setOrigin(0).setScale(0.4);
+        const bandera = this.add.image(133, -100, 'banderachile').setOrigin(0);
+        bandera.alpha = 0.9;
+        const brujula = this.add.image(20, 25, 'brujula').setOrigin(0).setScale(0.4);
+        brujula.alpha = 0.8;
         this.add.text(36,90, "Brújula\nConstitucional", stLogo);
         // this.add.image(25, 25, 'logo').setOrigin(0).setScale(0.8);
 
         const frame = this.add.rectangle(533, 498, 1016, 172, 0xC0C0C0);
         frame.setStrokeStyle(2, 0xff6699);
+        frame.alpha = 0.9;
         this.tweens.add({
             targets: frame,
             scaleX: 0.99,
@@ -120,7 +123,8 @@ export default class BrujulaConstitucional extends Phaser.Scene
         this.registerVolatile(this.add.text(50,435, "¡FELICIDADES!", stTitle));
         this.registerVolatile(this.add.text(50,500, "Haz llegado al final del juego. \nMira lo que hemos calculado como tu opción :)", stText));
 
-        this.registerVolatile(this.add.sprite(520, -115, 'result').setOrigin(0).setScale(1.25));
+        const result= this.registerVolatile(this.add.sprite(520, -115, 'result').setOrigin(0).setScale(1.25));
+        result.alpha = 0.9;
         this.registerVolatile(this.add.text(700,70, "Tu Resultado", stResult));
 
         let aFavorCount: number = 0
@@ -175,8 +179,9 @@ export default class BrujulaConstitucional extends Phaser.Scene
         this.volatileObjects = []
     }
 
-    registerVolatile(object: GameObject) {
+    registerVolatile<T extends GameObject>(object: T) {
         this.volatileObjects.push(object)
+        return object
     }
 
     registerVolatiles(objects: GameObject[]) {
@@ -209,6 +214,7 @@ export default class BrujulaConstitucional extends Phaser.Scene
     makeAnswerButton(answer: Answer, y: number) {
         const button = this.add.sprite(740, y, 'button1')
             .setOrigin(0).setScale(0.1).setInteractive();
+        button.alpha = 0.8;
         const text = this.add.text(765,y+20, answer.text, stButtonText);
         button.on('pointerup', _ => this.answerQuestion(answer.type))
 
