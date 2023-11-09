@@ -26,13 +26,6 @@ export const stText: TextStyle = {
     // backgroundColor: "#FFFF00"
 }
 
-export const stResult: TextStyle = {
-    fontFamily,
-    fontSize: 42,
-    color: "#FF0000",
-    // backgroundColor: "#FFFF00"
-}
-
 export const stButtonText: TextStyle = {
     fontFamily,
     fontSize: 34,
@@ -47,9 +40,39 @@ export const stButtonTextSmall: TextStyle = {
     fontSize: 25,
 }
 
-export const stPreference: TextStyle = {
+export const stButtonTextSmall2: TextStyle = {
+    ...stButtonText,
+    fontSize: 21,
+    color: "#d35400",
+    stroke: "#000000",
+    strokeThickness: 5
+}
+
+export const stResult: TextStyle = {
     fontFamily,
-    fontSize: 30,
-    color: "#FF00FF",
+    fontSize: 34,
+    color: "#FF0000",
+    stroke: "#b38f00",
+    strokeThickness: 3
+    // backgroundColor: "#FFFF00"
+}
+
+export const stPreference: TextStyle = {
+    fontFamily: "Courier",
+    fontSize: 89,
+    color: "#66ccff",
+    align: "center",
+    stroke: "#000000",
+    strokeThickness: 5
+    // backgroundColor: "#FFFF00"
+}
+
+export const stPreferenceIndeciso: TextStyle = {
+    fontFamily: "Courier",
+    fontSize: 55,
+    color: "#ffcc99",
+    align: "center",
+    stroke: "#000000",
+    strokeThickness: 5
     // backgroundColor: "#FFFF00"
 }
