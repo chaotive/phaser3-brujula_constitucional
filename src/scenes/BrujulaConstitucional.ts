@@ -10,6 +10,8 @@ import {
     stText,
     stTitle
 } from "../BrujulaConstitucional/styles";
+import Rectangle = Phaser.GameObjects.Rectangle;
+import {shuffle} from "../helpers";
 
 export default class BrujulaConstitucional extends Phaser.Scene
 {
@@ -18,6 +20,7 @@ export default class BrujulaConstitucional extends Phaser.Scene
     volatileObjects: GameObject[] = []
     disabledInteractives: GameObject[] = []
     modalVolatileObjects: GameObject[] = []
+    progress: Rectangle[] = []
 
     constructor ()
     {
@@ -106,11 +109,36 @@ export default class BrujulaConstitucional extends Phaser.Scene
         // this.showResult()
     }
 
-    createState(): GameState {
-        return {
-            questionIndex: 0,
-            answers: []
+    removeProgress() {
+        this.progress.forEach(o => o.destroy())
+        this.progress = []
+    }
+
+    drawProgress() {
+        for(let i = 0; i < this.gameData.questionsToAnswer; i++) {
+            const block =
+                this.add.rectangle(60 + i * 95, 377, 85, 25, 0xffffff)
+                    .setOrigin(0);
+            block.setStrokeStyle(2, 0xffff99);
+            this.progress.push(block)
         }
+    }
+
+    generateQuestionsPool(): number[] {
+        const numbers = []
+        for (let x = 0; x < this.gameData.questions.length; x++) numbers.push(x)
+        const values = shuffle(numbers)
+        return values.slice(0, this.gameData.questionsToAnswer)
+    }
+
+    createState(): GameState {
+        const state = {
+            questionIndex: 0,
+            answers: [],
+            questionsPool: this.generateQuestionsPool()
+        }
+        console.log(state)
+        return state
     }
 
     initState() {
@@ -175,7 +203,8 @@ export default class BrujulaConstitucional extends Phaser.Scene
         buttonAgain.on('pointerup', _ => {
             this.initState()
             this.cleanVolatiles()
-            this.addQuestions()
+            this.drawProgress()
+            this.showQuestion()
         })
         this.registerVolatile(buttonAgain);
     }
@@ -216,11 +245,12 @@ export default class BrujulaConstitucional extends Phaser.Scene
 
         this.state.questionIndex++;
 
-        if (this.state.questionIndex == this.gameData.questions.length) {
+        if (this.state.questionIndex == this.gameData.questionsToAnswer) {
             this.cleanVolatiles()
+            this.removeProgress()
             this.showResult()
         }
-        else this.addQuestions();
+        else this.showQuestion();
     }
 
     cleanVolatiles() {
@@ -270,9 +300,11 @@ export default class BrujulaConstitucional extends Phaser.Scene
         objects.forEach(o => this.modalVolatileObjects.push(o))
     }
 
-    addQuestions() {
+    showQuestion() {
         const question = this.gameData.questions[this.state.questionIndex];
         console.log(question);
+        this.progress[this.state.questionIndex].fillColor = 0xcc3300
+        if (this.state.questionIndex > 0) this.progress[this.state.questionIndex - 1].fillColor = 0x006699
 
         // clean sprites
         this.cleanVolatiles()
@@ -309,7 +341,8 @@ export default class BrujulaConstitucional extends Phaser.Scene
         const text = this.add.text(770,y+15, "COMENZAR", stButtonText);
         button.on('pointerup', _ => {
             this.cleanVolatiles()
-            this.addQuestions()
+            this.drawProgress()
+            this.showQuestion()
         })
 
         return [button, text]

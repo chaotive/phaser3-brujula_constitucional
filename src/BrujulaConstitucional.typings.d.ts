@@ -1,6 +1,7 @@
 export interface Answer {
     text: string
     type: number
+    explanation: string
 }
 
 export interface Question {
@@ -11,6 +12,7 @@ export interface Question {
 }
 
 export interface GameData {
+    questionsToAnswer: number
     questions: Question[]
 }
 
@@ -20,4 +22,5 @@ export interface GameState {
         type: number
     }[]
     questionIndex: number
+    questionsPool: number[]
 }
