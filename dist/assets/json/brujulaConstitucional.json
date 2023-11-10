@@ -1,14 +1,14 @@
 {
-  "questionsToAnswer": 5,
+  "questionsToAnswer": 10,
   "questions": [
     {
       "id": 1,
       "text": "¿Te gusta que un gobierno sea autoritario?",
       "level": 1,
       "answers":[
-        {"text": "Si", "type": 1},
-        {"text": "No", "type": 2},
-        {"text": "No se", "type": 0}
+        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
       ]
     },
     {
@@ -16,9 +16,9 @@
       "text": "¿Fue Pinochet un buen presidente?",
       "level": 1,
       "answers":[
-        {"text": "Si", "type": 1},
-        {"text": "No", "type": 2},
-        {"text": "No se", "type": 0}
+        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
       ]
     },
     {
@@ -26,9 +26,9 @@
       "text": "¿Debería el gobierno entregar ayuda para pagar el colegio de tus hijos?",
       "level": 1,
       "answers":[
-        {"text": "Si", "type": 2},
-        {"text": "No", "type": 1},
-        {"text": "No se", "type": 0}
+        {"text": "Si", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
       ]
     },
     {
@@ -36,9 +36,9 @@
       "text": "¿Esperas tener atención de salud en cualquier lugar, sin discriminación?",
       "level": 1,
       "answers":[
-        {"text": "Si", "type": 2},
-        {"text": "No", "type": 1},
-        {"text": "No se", "type": 0}
+        {"text": "Si", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
       ]
     },
     {
@@ -46,9 +46,69 @@
       "text": "¿Quieres que Republicanos gobierne en el pais?",
       "level": 1,
       "answers":[
-        {"text": "Si", "type": 1},
-        {"text": "No", "type": 2},
-        {"text": "No se", "type": 0}
+        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
+      ]
+    },
+    {
+      "id": 6,
+      "text": "¿Te gusta que un gobierno sea conservador?",
+      "level": 1,
+      "answers":[
+        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
+      ]
+    },
+    {
+      "id": 7,
+      "text": "¿Te gusta que un gobierno sea empresarial?",
+      "level": 1,
+      "answers":[
+        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
+      ]
+    },
+    {
+      "id": 8,
+      "text": "¿Te gusta que un gobierno sea de Vitacura?",
+      "level": 1,
+      "answers":[
+        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
+      ]
+    },
+    {
+      "id": 9,
+      "text": "¿Te gusta que un gobierno tenga conexiones con la iglesia?",
+      "level": 1,
+      "answers":[
+        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
+      ]
+    },
+    {
+      "id": 10,
+      "text": "¿Quieres que el pais apoye preferentemente a las empresas \ny no a las personas?",
+      "level": 1,
+      "answers":[
+        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
+      ]
+    },
+    {
+      "id": 11,
+      "text": "¿Crees que cada uno debe administrar su propia pensión?",
+      "level": 1,
+      "answers":[
+        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
+        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
       ]
     }
   ]
