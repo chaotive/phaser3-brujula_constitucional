@@ -22,5 +22,5 @@ export interface GameState {
         type: number
     }[]
     questionIndex: number
-    questionsPool: number[]
+    questions: number[]
 }

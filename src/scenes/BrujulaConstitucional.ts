@@ -125,17 +125,16 @@ export default class BrujulaConstitucional extends Phaser.Scene
     }
 
     generateQuestionsPool(): number[] {
-        const numbers = []
-        for (let x = 0; x < this.gameData.questions.length; x++) numbers.push(x)
-        const values = shuffle(numbers)
-        return values.slice(0, this.gameData.questionsToAnswer)
+        const ids = this.gameData.questions.map(q => q.id)
+        const shuffledIds = shuffle(ids)
+        return shuffledIds.slice(0, this.gameData.questionsToAnswer)
     }
 
-    createState(): GameState {
-        const state = {
+    createState() {
+        const state: GameState = {
             questionIndex: 0,
             answers: [],
-            questionsPool: this.generateQuestionsPool()
+            questions: this.generateQuestionsPool()
         }
         console.log(state)
         return state
@@ -166,15 +165,15 @@ export default class BrujulaConstitucional extends Phaser.Scene
 
         let aFavorCount: number = 0
         this.state.answers.forEach(a => { if (a.type == 1) { aFavorCount++ } } )
-        const aFavor = aFavorCount / this.gameData.questions.length * 100
+        const aFavor = aFavorCount / this.gameData.questionsToAnswer * 100
 
         let enContraCount: number = 0
         this.state.answers.forEach(a => { if (a.type == 2) { enContraCount++ } } )
-        const enContra = enContraCount / this.gameData.questions.length * 100
+        const enContra = enContraCount / this.gameData.questionsToAnswer * 100
 
         let indecisoCount: number = 0
         this.state.answers.forEach(a => { if (a.type == 0) { indecisoCount++ } } )
-        const indeciso = indecisoCount / this.gameData.questions.length * 100
+        const indeciso = indecisoCount / this.gameData.questionsToAnswer * 100
 
         // this.registerVolatile(
         //     this.add.text(695,100+50, "A favor: " + aFavor.toFixed(1) + "%", stPreference));
@@ -235,11 +234,18 @@ export default class BrujulaConstitucional extends Phaser.Scene
         this.disableInteractives()
     }
 
+    getCurrentQuestion(): Question{
+        const questionId = this.state.questions[this.state.questionIndex]
+        const question = this.gameData.questions.filter(q => q.id == questionId)[0]
+        if (!question) throw new Error("Question with id " + questionId + "not found")
+        return question
+    }
+
     answerQuestion(type: number)
     {
         // console.log(type);
         this.state.answers.push({
-            questionId: this.gameData.questions[this.state.questionIndex].id,
+            questionId: this.getCurrentQuestion().id,
             type
         })
 
@@ -301,7 +307,7 @@ export default class BrujulaConstitucional extends Phaser.Scene
     }
 
     showQuestion() {
-        const question = this.gameData.questions[this.state.questionIndex];
+        const question = this.getCurrentQuestion();
         console.log(question);
         this.progress[this.state.questionIndex].fillColor = 0xcc3300
         if (this.state.questionIndex > 0) this.progress[this.state.questionIndex - 1].fillColor = 0x006699
