@@ -1,5 +1,5 @@
 {
-    "name": "phaser3-typescript-project-template",
+    "name": "phaser3-brujula_constitucional",
     "version": "1.2.0",
     "description": "A Phaser 3 Project Template using Rollup and TypeScript",
     "main": "src/game.ts",
