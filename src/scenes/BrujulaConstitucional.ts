@@ -134,7 +134,7 @@ export default class BrujulaConstitucional extends Phaser.Scene
         const state: GameState = {
             questionIndex: 0,
             answers: [],
-            questions: this.generateQuestionsPool()
+            questionIds: this.generateQuestionsPool()
         }
         console.log(state)
         return state
@@ -208,8 +208,36 @@ export default class BrujulaConstitucional extends Phaser.Scene
         this.registerVolatile(buttonAgain);
     }
 
+    getAnswerData(question:Question, answerType: number): Answer {
+        const answer = question.answers.filter(a => a.type == answerType)[0]
+        if (!answer) throw new Error("No question answer data exists")
+        return answer
+    }
+
+    getTypeText(answer: Answer) {
+        switch(answer.type) {
+            case 1: return "A Favor"
+            case 2: return "En Contra"
+            case 0: return "Indeciso"
+            default: throw new Error("Invalid answer type")
+        }
+    }
+
+    generateExplanations(): string {
+        let explanations = ""
+        this.state.answers.forEach((a, i) => {
+            const question = this.getQuestionData(a.questionId)
+            const answer = this.getAnswerData(question, a.type)
+            explanations += "Pregunta " + (i + 1) + ": " + question.text + "\n"
+            explanations += "Opción elegida: " + answer.text + ". Tendencia: " + this.getTypeText(answer) + "\n"
+            explanations += "Explicación: " + answer.explanation + "\n\n"
+        })
+        return explanations
+    }
+
     showExplanationModal() {
-        const textData = this.cache.text.get('textData');
+        // const textData = this.cache.text.get('textData');
+        const textData = this.generateExplanations()
 
         const dom = this.registerModalVolatile(this.add.dom(625, 350, 'div',
             'background-color: rgba(0, 0, 80); width: 740px; height: 440px; font: 12px Courier; color: white; overflow: auto; padding: 5px',
@@ -235,9 +263,13 @@ export default class BrujulaConstitucional extends Phaser.Scene
     }
 
     getCurrentQuestion(): Question{
-        const questionId = this.state.questions[this.state.questionIndex]
-        const question = this.gameData.questions.filter(q => q.id == questionId)[0]
-        if (!question) throw new Error("Question with id " + questionId + "not found")
+        const id = this.state.questionIds[this.state.questionIndex]
+        return this.getQuestionData(id)
+    }
+
+    getQuestionData(id: number): Question{
+        const question = this.gameData.questions.filter(q => q.id == id)[0]
+        if (!question) throw new Error("Question with id " + id + "not found")
         return question
     }
 
