@@ -1,10 +1,56 @@
 <!DOCTYPE html>
-<html style="overflow: hidden">
+<html>
   <head>
     <meta charset="utf-8">
+    <script src="pageHelpers.js"></script>
     <script src="game.js"></script>
+    <link rel="stylesheet" href="game.css">
     <title>Brújula Constitucional</title>
   </head>
-  <body style="margin: 0">
+
+  <body class="full flex flex-rows flex-jc-se">
+
+    <div id="title" class="row">
+      <p>
+        <b>Brújula Constitucional</b> es un <b>Juego Web</b>, desarrollado para ayudarte a decidir tu voto
+        para la Propuesta de <b>Nueva Constitución del Consejo Constitucional 2023</b>.<br><br>
+        <b>Mira el video</b> explicándote como jugar, presiona el <b>botón para jugar a Pantalla Completa</b>
+        o <b>comienza a jugar de inmediato</b> presionando el botón "Comenzar".
+      </p>
+    </div>
+
+    <div id="main" class="row flex width-95">
+
+      <div class="col" id="fullscreen">
+        <button onclick="fullscreen()">
+          PRESIONA<br> AQUÍ<br> PARA<br> JUGAR A<br> PANTALLA<br> COMPLETA
+        </button>
+      </div>
+
+<!--      <div class="col" id="gamecontainer">-->
+        <div id="game" class=""></div>
+<!--      </div>-->
+
+      <div class="col" id="video">
+
+<!--        <iframe width="315" height="420"-->
+<!--                src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">-->
+<!--        </iframe>-->
+
+<!--        <iframe width="449" height="799" src="https://www.youtube.com/embed/H53rvZbZ1gI" title="¿Cómo jugar a Brújula Constitucional?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>-->
+        <iframe height="420" src="https://www.youtube.com/embed/H53rvZbZ1gI" title="¿Cómo jugar a Brújula Constitucional?" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+      </div>
+
+    </div>
+
+    <div id="footer" class="row">
+      <p>
+        © 2023 <b>brujulaconstitucional.cl</b><br>
+        Todos los derechos reservados
+      </p>
+    </div>
+
   </body>
+
 </html>

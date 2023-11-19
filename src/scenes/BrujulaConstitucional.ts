@@ -74,6 +74,7 @@ export default class BrujulaConstitucional extends Phaser.Scene
         // })
 
         this.add.image(0, 0, 'background1').setOrigin(0).setScale(1.3325);
+        // this.add.rectangle(0, 0, 1066, 600, 0xFFFFFF).setOrigin(0);
         const bandera = this.add.image(133, -100, 'banderachile').setOrigin(0);
         bandera.alpha = 0.9;
         const brujula = this.add.image(20, 25, 'brujula').setOrigin(0).setScale(0.4);

@@ -1,0 +1,102 @@
+html {
+    /*overflow: auto;*/
+    height: auto !important;
+    text-align: center;
+    background-image: url("assets/backgrounds/tile_repeating-art-paper-background.jpg");
+}
+
+html, button {
+    font-family: Verdana;
+}
+
+button {
+    cursor: pointer;
+    background-color: #BDFA19;
+    color: #2F97BC;
+    font-weight: bold;
+    border-color: #005125;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+
+button:hover {
+    background-color: silver;
+    transition: 0.7s;
+}
+
+button:active {
+    background-color: white;
+}
+
+.flex-jc-se {
+    justify-content: space-evenly !important;
+}
+
+.flex-rows {
+    flex-direction: column;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.full {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.width-95 {
+    width: 95%;
+}
+
+.auto-height {
+    height: auto !important;
+}
+
+.auto-width-height {
+    width: auto !important;
+    height: auto !important;
+}
+
+
+.row {
+    padding: 1em;
+}
+
+.col {
+    padding: 1em;
+}
+
+#fullscreen button {
+    padding: 1em;
+}
+
+#main {
+    border-left: 0.5em solid blue;
+    border-right: 0.5em solid red;
+
+    flex-direction: row;
+}
+
+@media (orientation:portrait) {
+    #main {
+        flex-direction: column;
+    }
+}
+
+#game {
+    /*margin: 1em;*/
+    /*width: auto !important;*/
+    /*width: 95% !important;*/
+}
+
+#title {
+    max-width: 50em;
+}
