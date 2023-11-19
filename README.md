@@ -5,7 +5,6 @@
 - Google analytics
 
 - Íconos para compartir en redes
-
 - Metada correcta para cada botón compartir
 
 # Phaser 3 TypeScript Project Template
