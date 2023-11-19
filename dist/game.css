@@ -100,3 +100,8 @@ button:active {
 #title {
     max-width: 50em;
 }
+
+#title #logo {
+    width: 10em;
+    display: none;
+}

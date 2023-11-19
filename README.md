@@ -1,3 +1,13 @@
+# TO-DO
+
+- Ícono de la página
+- Metadata correcta para SEO
+- Google analytics
+
+- Íconos para compartir en redes
+
+- Metada correcta para cada botón compartir
+
 # Phaser 3 TypeScript Project Template
 
 This quick-start project template combines Phaser 3.60 with [TypeScript 5](https://www.typescriptlang.org/) and uses [Rollup](https://rollupjs.org) for bundling.
