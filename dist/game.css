@@ -105,3 +105,11 @@ button:active {
     width: 10em;
     display: none;
 }
+
+#sharer td {
+    padding: 0.5em;
+}
+
+#footer p {
+    margin: 0
+}
