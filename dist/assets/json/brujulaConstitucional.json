@@ -3,113 +3,483 @@
   "questions": [
     {
       "id": 1,
-      "text": "¿Te gusta que un gobierno sea autoritario?",
+      "text": "Emblemas y Tradiciones 1) ¿Estás de acuerdo que el Estado limite la \nmúsica y juegos durante la semana del 18 de Septiembre?",
       "level": 1,
-      "answers":[
-        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
-      ]
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "Se podrá formular una ley y/o reglamento en que prohiba cualquier cosa distinta para el 18 de septiembre que no sean actividades identitarias. \n\nArtículo 11.2: Todo habitante de la República debe respeto a Chile y a sus emblemas nacionales. Los chilenos tienen el deber de honrar a la patria, respetando las actividades que dan origen a la identidad de ser chileno, tales como la música, artesanía,juegos populares, deportes criollos y artes, entre otros."
     },
     {
       "id": 2,
-      "text": "¿Fue Pinochet un buen presidente?",
+      "text": "Emblemas y Tradiciones 2) ¿Estás de acuerdo que te den una multa o ir a \nprisión por no honrar a la patria?",
       "level": 1,
-      "answers":[
-        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
-      ]
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "Podrán por ley y/o reglamento definir lo que es la identidad de ser chileno y tipicar de manera detallada qué y quiénes forman parte de las actividades que dan origen a la identidad de ser chileno. Esto podría ir acompañado de multas como sanción al no cumplimiento de la norma. \n\nArtículo 11.2: Todo habitante de la República debe respeto a Chile y a sus emblemas nacionales. Los chilenos tienen el deber de honrar a la patria, respetando las actividades que dan origen a la identidad de ser chileno, tales como la música, artesanía,juegos populares, deportes criollos y artes, entre otros."
     },
     {
       "id": 3,
-      "text": "¿Debería el gobierno entregar ayuda para pagar el colegio de tus hijos?",
+      "text": "Salud 1) ¿Quieres que te atiendan en un hospital sin importar tu sueldo?",
       "level": 1,
-      "answers":[
-        {"text": "Si", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
-      ]
+      "answers": [
+        {
+          "text": "Si",
+          "type": 2
+        },
+        {
+          "text": "No",
+          "type": 1
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes garantizarían el pago del 7% de salud de cada trabajador como mínimo ya que tendría que pagar adicional por cada bono, exámen, carga adicional y tratamiento hospitatlario. También garantizarían pagos de dineros del estado hacia   sistemas de salud privados.\n\nArtículo 16.22 b) Es deber preferente del Estado garantizar la ejecución de las acciones de salud, a través de instituciones estatales y privadas, en la forma y condiciones que determine la ley, la que podrá establecer cotizaciones obligatorias. Cada persona tendrá el derecho a elegir el sistema de salud al que desee acogerse, sea este estatal o privado. c) La ley establecerá un plan de salud universal, sin discriminación por edad, sexo o preexistencia médica, el cual será ofrecido por instituciones estatales y privadas."
     },
     {
       "id": 4,
-      "text": "¿Esperas tener atención de salud en cualquier lugar, sin discriminación?",
+      "text": "Salud 2) ¿Puedes pagar una clínica privada?",
       "level": 1,
-      "answers":[
-        {"text": "Si", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
-      ]
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes garantizarían el pago del 7% de salud de cada trabajador como mínimo ya que tendría que pagar adicional por cada bono, exámen, carga adicional y tratamiento hospitatlario. También garantizarían pagos de dineros del estado hacia   sistemas de salud privados.\n\nArtículo 16.22 b) Es deber preferente del Estado garantizar la ejecución de las acciones de salud, a través de instituciones estatales y privadas, en la forma y condiciones que determine la ley, la que podrá establecer cotizaciones obligatorias. Cada persona tendrá el derecho a elegir el sistema de salud al que desee acogerse, sea este estatal o privado. c) La ley establecerá un plan de salud universal, sin discriminación por edad, sexo o preexistencia médica, el cual será ofrecido por instituciones estatales y privadas."
     },
     {
       "id": 5,
-      "text": "¿Quieres que Republicanos gobierne en el pais?",
+      "text": "Salud 3) ¿Estás de acuerdo con pagar solamente el 7% para la salud?",
       "level": 1,
-      "answers":[
-        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
-      ]
+      "answers": [
+        {
+          "text": "Si",
+          "type": 2
+        },
+        {
+          "text": "No",
+          "type": 1
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes garantizarían el pago del 7% de salud de cada trabajador como mínimo ya que tendría que pagar adicional por cada bono, exámen, carga adicional y tratamiento hospitatlario. También garantizarían pagos de dineros del estado hacia   sistemas de salud privados.\n\nArtículo 16.22 b) Es deber preferente del Estado garantizar la ejecución de las acciones de salud, a través de instituciones estatales y privadas, en la forma y condiciones que determine la ley, la que podrá establecer cotizaciones obligatorias. Cada persona tendrá el derecho a elegir el sistema de salud al que desee acogerse, sea este estatal o privado. c) La ley establecerá un plan de salud universal, sin discriminación por edad, sexo o preexistencia médica, el cual será ofrecido por instituciones estatales y privadas."
     },
     {
       "id": 6,
-      "text": "¿Te gusta que un gobierno sea conservador?",
+      "text": "Educación 1) ¿Estás de acuerdo con pagar toda la educación sin importar \nel monto?",
       "level": 1,
-      "answers":[
-        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
-      ]
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes garantizarían que los colegios privados puedan recibir dineros del estado y del apoderado sin mayores limites.\n\nArtículo 16. 23 f) Se asignarán recursos públicos a instituciones estatales y privadas, según criterios de razonabilidad, calidad y no discriminación arbitraria. En ningún caso dicha asignación podrá condicionar la libertad de enseñanza."
     },
     {
       "id": 7,
-      "text": "¿Te gusta que un gobierno sea empresarial?",
+      "text": "Educación 2) ¿Prefieres tener a tu hijo en un colegio privado?",
       "level": 1,
-      "answers":[
-        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
-      ]
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes garantizarían que los colegios privados puedan recibir dineros del estado y del apoderado sin mayores limites.\n\nArtículo 16. 23 f) Se asignarán recursos públicos a instituciones estatales y privadas, según criterios de razonabilidad, calidad y no discriminación arbitraria. En ningún caso dicha asignación podrá condicionar la libertad de enseñanza."
     },
     {
       "id": 8,
-      "text": "¿Te gusta que un gobierno sea de Vitacura?",
+      "text": "Educación 3) ¿Prefieres que se estudie en una universidad privada?",
       "level": 1,
-      "answers":[
-        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
-      ]
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes garantizarían que los colegios privados puedan recibir dineros del estado y del apoderado sin mayores limites.\n\nArtículo 16. 23 f) Se asignarán recursos públicos a instituciones estatales y privadas, según criterios de razonabilidad, calidad y no discriminación arbitraria. En ningún caso dicha asignación podrá condicionar la libertad de enseñanza."
     },
     {
       "id": 9,
-      "text": "¿Te gusta que un gobierno tenga conexiones con la iglesia?",
+      "text": "Educación 4) ¿Estás de acuerdo con expulsar a un niño o adolescente \nde un colegio porque los padres se separaron?",
       "level": 1,
-      "answers":[
-        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
-      ]
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes garantizarían la restricción de no aceptar la matrícula de alumnos de padres separados o madres solteras.\n\nArtículo 16. 13 El derecho a la libertad de pensamiento, de conciencia y de religión. Se garantiza su ejercicio, debido respeto y protección. Este derecho incluye la libertad de toda personapara adoptar la religión o las creencias de su elección, a vivir conforme a ellas y a transmitirlas. Comprende además la objeción de conciencia, la que se ejercerá de conformidad a la ley.                                                                                    a) Los padres, y en su caso los tutores, tienen derecho a educar a sus hijos o pupilos, y a elegir su educación religiosa, espiritual y moral que esté de acuerdo con sus propias convicciones. Las familias tienen el derecho de instituir proyectos educativos y las comunidades educativas a conservar la integridad e identidad de su respectivo proyecto de conformidad con sus convicciones morales y religiosas. b) La libertad religiosa comprende el libre ejercicio y expresión del culto, la libertad de profesar, conservar y cambiar de religión o creencias, la de manifestar, divulgar y enseñar la religión o las creencias, la celebración de los ritos y las prácticas, todo ello en público y en privado, individual y colectivamente, en cuanto no se opongan a la moral, a las buenas costumbres o al orden público."
     },
     {
       "id": 10,
-      "text": "¿Quieres que el pais apoye preferentemente a las empresas \ny no a las personas?",
+      "text": "Educación 5) ¿Estás de acuerdo que los colegios seleccionen los \nestudiantes según su creencia religiosa?",
       "level": 1,
-      "answers":[
-        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
-      ]
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes garantizarían la restricción de no aceptar la matrícula de alumnos que no estén bautizados y/o confirmados por una religión en particular.\n\nArtículo 16. 13 El derecho a la libertad de pensamiento, de conciencia y de religión. Se garantiza su ejercicio, debido respeto y protección. Este derecho incluye la libertad de toda personapara adoptar la religión o las creencias de su elección, a vivir conforme a ellas y a transmitirlas. Comprende además la objeción de conciencia, la que se ejercerá de conformidad a la ley.                                                                                    a) Los padres, y en su caso los tutores, tienen derecho a educar a sus hijos o pupilos, y a elegir su educación religiosa, espiritual y moral que esté de acuerdo con sus propias convicciones. Las familias tienen el derecho de instituir proyectos educativos y las comunidades educativas a conservar la integridad e identidad de su respectivo proyecto de conformidad con sus convicciones morales y religiosas. b) La libertad religiosa comprende el libre ejercicio y expresión del culto, la libertad de profesar, conservar y cambiar de religión o creencias, la de manifestar, divulgar y enseñar la religión o las creencias, la celebración de los ritos y las prácticas, todo ello en público y en privado, individual y colectivamente, en cuanto no se opongan a la moral, a las buenas costumbres o al orden público."
     },
     {
       "id": 11,
-      "text": "¿Crees que cada uno debe administrar su propia pensión?",
+      "text": "Educación 6) ¿Estás de acuerdo que los colegios seleccionen a los \nestudiantes según su estatus económico?",
       "level": 1,
-      "answers":[
-        {"text": "Si", "type": 1, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No", "type": 2, "explanation": "El articulo 1 indica que blablaba"},
-        {"text": "No se", "type": 0, "explanation": "El articulo 1 indica que blablaba"}
-      ]
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes garantizarían la entrega de dineros del estado a los sistemas educacionales privados.\n\nArtículo 16. 23 f) Se asignarán recursos públicos a instituciones estatales y privadas, según criterios de razonabilidad, calidad y no discriminación arbitraria. En ningún caso dicha asignación podrá condicionar la libertad de enseñanza."
+    },
+    {
+      "id": 12,
+      "text": "Educación 7) ¿Estás de acuerdo que los padres sean los \nprofesores exclusivos de tus hijos?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": " La nueva constitución y leyes permitirían solamente a los padres o tutores determinar lo que pueden aprender sus hijos lo que puede causar un caos en los sistemas educativos. Éste artículo permitiría a los padres enseñar desde sus casas lo que quieran a sus hijos sin restricción alguna, es decir, cada casa sería un tipo de establecimiento educacional.\n\nArtículo 16. 24 b) La libertad de enseñanza existe para garantizar a las, a través de los padres o tutores legales, según sea el caso, el derecho preferente y el deber de educar a sus hijos opupilos; de escoger el tipo de educación; y de enseñarles por sí mismos o de elegir para ellos el establecimiento de enseñanza que estimen de acuerdo con sus convicciones morales o religiosas. Asimismo, garantiza a toda persona la\nelección del establecimiento educacional de su preferencia."
+    },
+    {
+      "id": 13,
+      "text": "Educación 8) ¿Estás de acuerdo que el Estado entregue educación gratuita?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 2
+        },
+        {
+          "text": "No",
+          "type": 1
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes permitirían tener educación primaria y secundaria pública, gratuita además de asegurar el sistema educacional privado con dineros del estado.\n\nArtículo 16. 23 e) La educación básica y la educación media son obligatorias, debiendo el Estado financiar y coordinar un sistema gratuito con tal objeto, destinado a asegurar el acceso a ellas de toda la población, garantizando el financiamiento por estudiante en establecimientos estatales y privados. En el caso de la educación media la obligatoriedad se extenderá hasta cumplir los veintiún años de edad."
+    },
+    {
+      "id": 14,
+      "text": "Educación 9) ¿Estás de acuerdo que el Estado le entregue recursos a \ncolegios privados?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes garantizarían la entrega de dineros del estado a los sistemas educacionales privados.\n\nArtículo 16. 23 f) Se asignarán recursos públicos a instituciones estatales y privadas, según criterios de razonabilidad, calidad y no discriminación arbitraria. En ningún caso dicha asignación podrá condicionar la libertad de enseñanza."
+    },
+    {
+      "id": 15,
+      "text": "Educación 10) ¿Estás de acuerdo que los niños y adolescentes NO sean \nprotegidos si sufren abusos sexuales, físicos y psiquicos por sus padres?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 2
+        },
+        {
+          "text": "No",
+          "type": 1
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes permitirían a los padres no llevar a sus hijos al colegio sin supervisión legal alguna por la libertad absoluta de enseñanza. Esto imposibilitaría ver los abusos sexuales y físicos que puedan sufrir los niños al no ir al colegio siendo éste el lugar donde se identifican estos actos por parte de la familia.\n\nArtículo 16. 13 El derecho a la libertad de pensamiento, de conciencia y de religión. Se garantiza su ejercicio, debido respeto y protección. Este derecho incluye la libertad de toda personapara adoptar la religión o las creencias de su elección, a vivir conforme a ellas y a transmitirlas. Comprende además la objeción de conciencia, la que se ejercerá de conformidad a la ley.                                                                                    a) Los padres, y en su caso los tutores, tienen derecho a educar a sus hijos o pupilos, y a elegir su educación religiosa, espiritual y moral que esté de acuerdo con sus propias convicciones. Las familias tienen el derecho de instituir proyectos educativos y las comunidades educativas a conservar la integridad e identidad de su respectivo proyecto de conformidad con sus convicciones morales y religiosas. b) La libertad religiosa comprende el libre ejercicio y expresión del culto, la libertad de profesar, conservar y cambiar de religión o creencias, la de manifestar, divulgar y enseñar la religión o las creencias, la celebración de los ritos y las prácticas, todo ello en público y en privado, individual y colectivamente, en cuanto no se opongan a la moral, a las buenas costumbres o al orden público."
+    },
+    {
+      "id": 16,
+      "text": "AFP 1) ¿Estás de acuerdo con mantener las AFP como sistema de pensiones?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes protegerían las AFP por sobre el cotizante  al mantener las cuentas individuales para el mercado de capitales, es decir, seguirán prestando el dinero a las empresas grandes que darán las mismas pensiones que tenemos hoy.\n\nArtículo 16 . 28: a) El Estado garantiza el acceso a prestaciones básicas y uniformes, establecidas por la ley, sea que se otorguen a través de instituciones públicas o privadas, resguardando a las personas de las contingencias de vejez, discapacidad, muerte, enfermedad, embarazo, maternidad, paternidad, cesantía, accidentes y enfermedades laborales, sin perjuicio del establecimiento de otras contingencias o circunstancias fijadas en la ley. La ley podrá establecer cotizaciones obligatorias. b) Cada persona tendrá propiedad sobre sus cotizaciones previsionales para la vejez y los ahorros generados por estas, y tendrá el derecho a elegir libremente la institución, estatal o privada, que los administre e invierta. En ningún caso podrán ser expropiados o apropiados por el Estado a través de mecanismo alguno."
+    },
+    {
+      "id": 17,
+      "text": "Derechos de los Trabajadores 1) ¿Estás de acuerdo con negociar solo(a) \ntu contrato con el empleador?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes protegería al trabajador en situación antisindical.\n\nArtículo 16 . 27: b) Nadie puede ser obligado a afiliarse a una organización sindical o a desafiliarse de ella. Los trabajadores gozarán de una adecuada protección en contra de los actos de discriminación antisindical en relación con su empleo."
+    },
+    {
+      "id": 18,
+      "text": "Derechos de los Trabajadores 2) ¿Quieres tener el derecho de elegir el día \ny hora de una huelga en tu trabajo?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 2
+        },
+        {
+          "text": "No",
+          "type": 1
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes no permitirían una huelga fuera de plazo de la negociación colectiva.\n\nSi tu empresa decide aumentar tus horas sin previo aviso, podrás reclamar y hacer una huelga tres años después.\n\nArtículo 16 . 27 : La libertad sindical. Esta comprende el derecho a la sindicalización y a la huelga ejercida dentro del marco de la negociación colectiva."
+    },
+    {
+      "id": 19,
+      "text": "Derechos de Igualdad de Género 1) ¿Estás de acuerdo con que un hombre y \nuna mujer reciban el mismo sueldo si hacen el mismo trabajo?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 2
+        },
+        {
+          "text": "No",
+          "type": 1
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes permitirían que hombre y mujer reciban el mismo sueldo solamente si pertenecen a la misma empresa, es decir, si el hombre está en una empresa contratista y la mujer contratada por la empresa principal y ambos hacen el mismo trabajo, recibirían distintos sueldos por el hecho de perntenecer a empresas distintas.\n\nSi el hombre está subcontratado y la mujer contratada por la empresa principal haciendo el mismo trabajo, ambos recibirían distintos sueldos por pertencer a empresas distintas. Ejemplo, cajeros del Lider.\n\nArtículo 16. 26 c) Se prohíbe cualquier discriminación arbitraria que no se base en la capacidad o idoneidad personal, sin perjuicio de que la ley pueda exigir la nacionalidad chilena o límites de edad para determinados casos. Asimismo, se proscribe la discriminación arbitraria en materia de retribución por trabajo de igual valor y con el mismo empleador, especialmente entre hombres y mujeres, de conformidad con la ley."
+    },
+    {
+      "id": 20,
+      "text": "Derechos de Agua 1) ¿Estás de acuerdo que el agua sea un derecho?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 2
+        },
+        {
+          "text": "No",
+          "type": 1
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "Artículo 16. 30. El derecho al acceso al agua y al saneamiento, de conformidad con la ley. Es deber del Estado garantizar este derecho a las generaciones actuales y futuras. Asimismo, es deber del Estado promover la seguridad hídrica, acorde a criterios de sustentabilidad. La legislación, regulación y gestión deberán incorporar todas las funciones de las aguas, priorizando el consumo humano y su uso doméstico de subsistencia.\n\nLa nueva constitución y leyes permitirían el acceso al agua y no el derecho vital del agua para las familias chilenas."
+    },
+    {
+      "id": 21,
+      "text": "Derechos de Agua 2) ¿Estás de acuerdo que el agua sea un negocio?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes consagrarían el agua como negocio y no como derecho al no poner límites a las concesiones permitiendo que las empresas sigan con el negocio al tener menos acceso al consumo diario para las familias. Esto, además, aumentaría el costo mensual de cada familia.\n\nArtículo 16. 35. i) Las aguas, en cualquiera de sus estados y en fuentes naturales u obras estatales de desarrollo del recurso, son bienes nacionales de uso público. En consecuencia, su dominio y uso pertenecen a la Nación toda. Sin perjuicio de aquello, podrán constituirse o reconocerse derechos de aprovechamiento de aguas, los que confieren a su titular el uso y goce de estas, y le permiten disponer, transmitir y transferir tales derechos, en conformidad con la ley."
+    },
+    {
+      "id": 22,
+      "text": "Tributación de Empresas y Ciudadanos 1) ¿Estás de acuerdo que las viviendas \nmás caras no paguen impuestos?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes permitirían ampliar la ley ya existente de viviendas pequeñas a viviendas grandes o millonarias al quedar exentas del pago de contribuciones. Esto beneficia solamente a personas de muchos recursos.\n\nArtículo 16 . 29 c) El inmueble destinado a la vivienda principal del propietario, sea que la habite solo o con su familia, en su caso, estará exento de toda contribución e impuesto territorial."
+    },
+    {
+      "id": 23,
+      "text": "Tributación de Empresas y Ciudadanos 2) ¿Estás de acuerdo que las \ngrandes empresas paguen menos impuestos de lo que pagan ahora?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes permitirían que los dueños de empresas grandes puedan demandar al Estado Chileno por considerar que pagan más impuestos y contribuciones que las pequeñas y medianas empresas (PYMES) por conceptos de \"desproporción\" y \"discriminación\".\n\nArtículo 16 . 31  La igual repartición de los tributos en proporción a las rentas o en la progresión o forma que fije la ley y la igual repartición y proporcionalidad de las demás cargas públicas legales. a) En ningún caso la ley podrá establecer tributos que, individual o conjuntamente considerados, respecto de una misma persona, sean desproporcionados, de alcance confiscatorio, injustos o retroactivos. b) Los gastos objetivamente necesarios para la vida, cuidado o desarrollo de la persona y su familia se considerarán deducibles para la determinación de los tributos que correspondan. e)  El Estado deberá compensar las cargas públicas discriminatorias, desproporcionadas o de alcance retroactivo. La ley establecerá un procedimiento para hacer efectiva esta compensación. Dicha ley deberá contemplar, además, un procedimiento para hacer efectiva la responsabilidad patrimonial del Estado por actos del legislador que contravengan esta Constitución, cuando así lo declare el Tribunal Constitucional."
+    },
+    {
+      "id": 24,
+      "text": "Tributación de Empresas y Ciudadanos 3) ¿Apruebas que grandes \nempresas fuercen al Estado Chileno a pagar menos impuestos que las PYMES?",
+      "level": 1,
+      "answers": [
+        {
+          "text": "Si",
+          "type": 1
+        },
+        {
+          "text": "No",
+          "type": 2
+        },
+        {
+          "text": "No se",
+          "type": 0
+        }
+      ],
+      "answerExplanation": "La nueva constitución y leyes permitirían que los dueños de empresas grandes puedan demandar al Estado Chileno por considerar que pagan más impuestos y contribuciones que las pequeñas y medianas empresas (PYMES) por conceptos de \"desproporción\" y \"discriminación\".\n\nArtículo 16 . 31  La igual repartición de los tributos en proporción a las rentas o en la progresión o forma que fije la ley y la igual repartición y proporcionalidad de las demás cargas públicas legales. a) En ningún caso la ley podrá establecer tributos que, individual o conjuntamente considerados, respecto de una misma persona, sean desproporcionados, de alcance confiscatorio, injustos o retroactivos. b) Los gastos objetivamente necesarios para la vida, cuidado o desarrollo de la persona y su familia se considerarán deducibles para la determinación de los tributos que correspondan. e)  El Estado deberá compensar las cargas públicas discriminatorias, desproporcionadas o de alcance retroactivo. La ley establecerá un procedimiento para hacer efectiva esta compensación. Dicha ley deberá contemplar, además, un procedimiento para hacer efectiva la responsabilidad patrimonial del Estado por actos del legislador que contravengan esta Constitución, cuando así lo declare el Tribunal Constitucional."
     }
   ]
 }

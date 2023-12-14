@@ -1,7 +1,6 @@
 export interface Answer {
     text: string
     type: number
-    explanation: string
 }
 
 export interface Question {
@@ -9,6 +8,7 @@ export interface Question {
     text: string
     level: number
     answers: Answer[]
+    answerExplanation: string
 }
 
 export interface GameData {

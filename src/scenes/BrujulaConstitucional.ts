@@ -48,7 +48,8 @@ export default class BrujulaConstitucional extends Phaser.Scene
 
         this.load.image('background1', 'assets/backgrounds/background1.png');
         this.load.image('banderachile', 'assets/backgrounds/banderachile.png');
-        this.load.image('brujula', 'assets/backgrounds/brujula.png');
+        // this.load.image('brujula', 'assets/backgrounds/brujula.png');
+        this.load.image('brujula', 'assets/brujulaconstitucional.logo.png');
 
         this.load.text('textData', 'assets/text/appName.txt');
     }
@@ -77,9 +78,9 @@ export default class BrujulaConstitucional extends Phaser.Scene
         // this.add.rectangle(0, 0, 1066, 600, 0xFFFFFF).setOrigin(0);
         const bandera = this.add.image(133, -100, 'banderachile').setOrigin(0);
         bandera.alpha = 0.9;
-        const brujula = this.add.image(20, 25, 'brujula').setOrigin(0).setScale(0.4);
+        const brujula = this.add.image(25, 25, 'brujula').setOrigin(0).setScale(0.7);
         brujula.alpha = 0.8;
-        this.add.text(36,90, "Brújula\nConstitucional", stLogo);
+        // this.add.text(36,90, "Brújula\nConstitucional", stLogo);
         // this.add.image(25, 25, 'logo').setOrigin(0).setScale(0.8);
 
         const frame = this.add.rectangle(533, 498, 1016, 172, 0xC0C0C0);
@@ -229,9 +230,10 @@ export default class BrujulaConstitucional extends Phaser.Scene
         this.state.answers.forEach((a, i) => {
             const question = this.getQuestionData(a.questionId)
             const answer = this.getAnswerData(question, a.type)
+            explanations += "**********************************\n\n\n\n"
             explanations += "Pregunta " + (i + 1) + ": " + question.text + "\n"
-            explanations += "Opción elegida: " + answer.text + ". Tendencia: " + this.getTypeText(answer) + "\n"
-            explanations += "Explicación: " + answer.explanation + "\n\n"
+            explanations += "Opción elegida: " + answer.text + ". Tendencia: " + this.getTypeText(answer) + "\n\n"
+            explanations += "Explicación: " + question.answerExplanation + "\n\n\n\n"
         })
         return explanations
     }
@@ -241,7 +243,7 @@ export default class BrujulaConstitucional extends Phaser.Scene
         const textData = this.generateExplanations()
 
         const dom = this.registerModalVolatile(this.add.dom(625, 350, 'div',
-            'background-color: rgba(0, 0, 80); width: 740px; height: 440px; font: 12px Courier; color: white; overflow: auto; padding: 5px',
+            'background-color: rgba(255, 255, 231); width: 740px; height: 440px; font: 12px Courier; color: rgba(0, 0, 0); overflow: auto; padding: 5px; font-size: 1em',
             textData));
 
         const frame = this.registerModalVolatile(
